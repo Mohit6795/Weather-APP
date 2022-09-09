@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0dda0f4d72.js" crossorigin="anonymous"></script>
+    <title>Bikewale</title>
+    <link rel="stylesheet" href="boot.css">
+</head>
+<body>
+    <header class="p-3  bg-dark text-white">
+        <div id="navbar">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <img class="navbar-button ms-0" height="17"  src="img/navbarbtn.png" alt="Navbarbtn">
+                    <a href="#" class="d-flex align-items-center  mb-lg-0 text-white text-decoration-none">
+                        <img class="bi me-1 logobike" width="100" height="40" role="img" src="img/logo.png"></img>
+                    </a>
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    </ul>
+                    <button class="weatherapi me-4" onclick="geolocation()">
+                        <span id="out"></span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span id="location"></span>
+                        <span id="weather"></span>
+                        <i class='fab fa-skyatlas'></i>
+                    </button>
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                    </form>
+            
+                    <div class="text-end">
+                        <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#myModal">Login</button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal"> Sign-up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Section 1 Search & Banner -->
+    <div id="search">
+        <div class="welcomebox justify-content-center d-grid col-12 position-absolute">
+            <h1 class="headtitle">FIND THE RIGHT BIKE</h1>
+            
+            <p class="mt-1 ptitle" >Get Comprehensive Information on Bike Prices, Specs, Reviews & More!</p>
+        </div>
+        <div class="d-flex wid position-absolute bar1" >
+            <input type="text" class="form-control " placeholder="Search your bike here, e.g. Royal Enfield Hunter 350" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-dark" type="button" id="button-addon2">Button</button>
+        </div>
+    </div>
+    <!-- Section 2 Brands & Browse bikes by -->
+    <section id="Browse bikes by">
+        <h4 class="text-center mt-4 text1" font-weight:900>Browse bikes by</h4>
+        <div class=" Container ">
+            <div class="w-75   col1">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-pills card-header-pills">
+                            <li class="nav-item w-25">
+                            <a class="nav-link active" href="#">Brand</a>
+                            </li>
+                            <li class="nav-item w-25">
+                                <a class="nav-link disabled" href="#">Budget</a>
+                            </li>
+                            <li class="nav-item w-25">
+                                <a class="nav-link disabled" href="#">Mileage</a>
+                            </li>
+                            <li class="nav-item  w-25">
+                            <a class="nav-link disabled" href="#">Body Style
+                            </a>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div id="content">
+                            <div id="number_container">
+                            <ul>
+                                <li class="selectbrand">
+                                    <a href="#tvs">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/tvs.webp" alt="TVS bikes">
+                                        </span>
+                                        <span class="brandlogotitle">TVS</span>
+                                    </a>
+                                </li>
+                                <li class="selectbrand">
+                                    <a href="#bajaj">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/bajaj.webp" alt="Bajaj bikes">  
+                                        </span>
+                                        <span class="brandlogotitle">Bajaj</span>
+                                    </a>
+                                </li>
+                                <li class="selectbrand">
+                                    <a href="#bmw">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/bmw.webp" alt="BMW bikes">
+                                        </span>
+                                        <span class="brandlogotitle">BMW</span>
+                                    </a>
+                                </li>
+                                <li class="selectbrand">
+                                    <a href="#hero">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/hero.webp" alt="Hero bikes">
+                                        </span>
+                                        <span class="brandlogotitle">Hero</span>
+                                    </a>
+                                </li>
+                                <li class="selectbrand">
+                                    <a href="#Honda">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/honda.webp" alt="Honda bikes">
+                                        </span>
+                                        <span class="brandlogotitle">Honda</span>
+                                    </a>
+                                </li>
+                                <li class="selectbrand">
+                                    <a href="#Yezdi">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/yezdi.webp" alt="Yezdi bikes">
+                                        </span>
+                                        <span class="brandlogotitle">Yezdi</span>
+                                    </a>
+                                </li>
+                                <li class="selectbrand">
+                                    <a href="#KTM">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/ktm.webp" alt="KTM bikes">
+                                        </span>
+                                        <span class="brandlogotitle">KTM</span>
+                                    </a>
+                                </li>
+                                <li class="selectbrand">
+                                    <a href="#RoyalEnfield">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/royal-enfield.webp" alt="RoyalEnfield bikes">
+                                        </span>
+                                        <span id="brandlogotitle">Royal Enfield</span>
+                                    </a>
+                                </li>
+                                <li class="selectbrand">
+                                    <a href="#suzuki">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/suzuki.webp" alt="suzuki bikes">
+                                        </span>
+                                        <span class="brandlogotitle">Suzuki</span>
+                                    </a>
+                                </li>
+                                <li class="selectbrand">
+                                    <a href="#Yamaha">
+                                        <span class="brandlogo">
+                                            <img src="brandslogo/yamaha.webp" alt="Yamaha bikes">
+                                        </span>
+                                        <span class="brandlogotitle">Yamaha</span>
+                                    </a>
+                                </li>          
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid gap-1 col-3 mx-auto w-50">
+                    <button type="button" class="btn btn-outline-warning mb-2 view-all-target-btn">View more Brands</button>
+                </div> 
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- featuredbike -->
+    <section id="Browse bikes by">
+        <h4 class="text-center mt-4 text1" font-weight:900>Featured bikes</h4>
+        <div class=" Container">
+            <div class="w-75  col1">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs  card-header-tabs">
+                        <li class="nav-item feliw">
+                            <a class="nav-link active" aria-current="true" href="#">Most Popular</a>
+                        </li>
+                        <li class="nav-item feliw">
+                            <a class="nav-link disabled" href="#">New launches</a>
+                        </li>
+                        <li class="nav-item feliw">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Upcoming</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-group p-1">
+                            <div class="card m-2">
+                                <img src="feature or best bikes img/g310-rr-right-front-three-quarter.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="bikename">BMW G310 RR</h5>
+                                    <p class="shortspecification">312 cc, 33.5 bhp, 174 kg</p>
+                                    <div>
+                                        <span class="pricetitle">Avg. Ex-showroom price</span>
+                                        <span class="onlineprice">₹ 2,85,000</span>
+                                    </div>
+                                    <span class="font14">onwards</span> 
+                                    <div>
+                                        <button class="pricebtn">Check on-road price</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card m-2">
+                                <img src="feature or best bikes img/ronin-225-right-front-three-quarter.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="bikename">TVS Ronin 225</h5>
+                                    <p class="shortspecification">226 cc, 20 bhp, 159kg</p>
+                                    <span class="pricetitle">Avg. Ex-showroom price</span>
+                                    <div>
+                                        <span class="onlineprice">₹ 1,49,000</span>
+                                        <span class="font14">onwards</span>
+                                    </div> 
+                                    <div>
+                                        <button class="pricebtn">Check on-road price</button>
+                                    </div>                                
+                                </div>
+                            </div>
+
+                            <div class="card m-2">
+                                <img src="feature or best bikes img/R15 V4 Model Image.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="bikename ">R15 V4</h5>
+                                    <p class="shortspecification">155cc, 18.1bhp, 142kg</p>
+                                    <span class="pricetitle">Avg. Ex-showroom price</span>
+                                    <div>
+                                        <span class="onlineprice">₹ 1,78,000</span>
+                                        <span class="font14">onwards</span>
+                                    </div>                             
+                                    <div>
+                                        <button class="pricebtn">Check on-road price</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-3 mx-auto w-50">
+                        <button type="button" class="btn btn-outline-warning mb-2 view-all-target-btn ">View more Brands</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+<!-- //////////////////modal///////////////////////// -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="rounded d-flex justify-content-center">
+                        <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-light" style="width:100% ;">
+                            <div class="text-center">
+                                <h3 class="text-primary">Sign In</h3>
+                            </div>
+                            <form action="">
+                                <div class="p-4">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text bg-primary">
+                                            <i class="bi bi-person-plus-fill text-white"></i></span>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text bg-primary"><i
+                                                class="bi bi-key-fill text-white"></i></span>
+                                        <input type="password" class="form-control" placeholder="password">
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Remember Me
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-primary text-center mt-2" type="submit">
+                                        Login
+                                    </button>
+                                    <p class="text-center mt-5">Don't have an account?
+                                        <span class="text-primary">Sign Up</span>
+                                    </p>
+                                    <p class="text-center text-primary">Forgot your password?</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\banner2//////////////////////////////////////////// -->
+    <section>
+        <div id="chackprice-banner"> 
+            <div id="borderonbanner">
+                <h2 id="heading3">On-road price</h2>
+                <input type="text" placeholder="Search Make and Model" id="makemodelfinalprice">
+                <div id="loc-2">
+                    <select  id="selectloc-2">
+                        <option>--Select--</option>
+                        <option>B-Road,Jodhpur</option>
+                        <option>C-Road,Jodhpur</option>
+                        <option>Ratanada</option>
+                        <option>Jaljog Chok</option>
+                        <option>Chandni Market</option>
+                        <option>Mandore</option>
+                    </select>
+                </div>
+                <div class="d-grid gap-3 col-3 mx-auto w-75 ms-3 mt-3">
+                    <button type="button" class="btn  bg-danger text-white vv ">On-Road Price</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Browse bikes by">
+        <h4 class="text-center mt-4 text1" font-weight:900> Best bikes of September 2022</h4>
+        <div class=" Container ">
+            <div class="w-75  col1">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs  card-header-tabs">
+                        <li class="nav-item bliw1">
+                            <a class="nav-link active" aria-current="true" href="#">Scooters</a>
+                        </li>
+                        <li class="nav-item bliw1">
+                            <a class="nav-link disabled" href="#">Mileage Bike</a>
+                        </li>
+                        <li class="nav-item bliw1">
+                            <a class="nav-link disabled" href="#">Sports</a>
+                        </li>
+                        <li class="nav-item bliw1">
+                            <a class="nav-link disabled" href="#">Cruisers</a>
+                        </li>
+                        <li class="nav-item bliw1">
+                            <a class="nav-link disabled" href="#" >Electric bikes</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-group p-1">
+                            <div class="card m-2">
+                                <img src="feature or best bikes img/ray-right-front-three-quarter-2.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="bikename">Yamaha Ray ZR</h5>
+                                    <p class="shortspecification">125 cc, 8.04 bhp, 98kg</p>
+                                    <div>
+                                        <span class="pricetitle">Avg. Ex-showroom price</span>
+                                        <span class="onlineprice">₹ 82,247</span>
+                                    </div>
+                                    <span class="font14">onwards</span> 
+                                    <div>
+                                        <button class="pricebtn">Check on-road price</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card m-2">
+                                <img src="feature or best bikes img/450x-gen-3-right-front-three-quarter.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="bikename">Ather 450X Gen 3</h5>
+                                    <p class="shortspecification">124.8 cc, 9.25 bhp, 118kg</p>
+                                    <span class="pricetitle">Avg. Ex-showroom price</span>
+                                    <div>
+                                        <span class="onlineprice">₹ 83,779</span>
+                                        <span class="font14">onwards</span>
+                                    </div> 
+                                    <div>
+                                        <button class="pricebtn">Check on-road price</button>
+                                    </div>                                
+                                </div>
+                            </div>
+
+                            <div class="card m-2">
+                                <img src="feature or best bikes img/ntorq-125-right-front-three-quarter.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="bikename ">TVS Ntorq 125</h5>
+                                    <p class="shortspecification">124.8 cc, 9.25 bhp, 118kg</p>
+                                    <span class="pricetitle">Avg. Ex-showroom price</span>
+                                    <div>
+                                        <span class="onlineprice">₹ 83,779</span>
+                                        <span class="font14">onwards</span>
+                                    </div>                             
+                                    <div>
+                                        <button class="pricebtn">Check on-road price</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-3 mx-auto w-50">
+                        <button type="button" class="btn btn-outline-warning mb-2 view-all-target-btn">View more Brands</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- comp section -->
+
+    <!-- <section id="Browse bikes by">
+        <h4 class="text-center mt-4 text1" font-weight:900>Featured bikes</h4>
+        <div class=" Container">
+            <div class="w-75  col1">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs  card-header-tabs">
+                        <li class="nav-item feliw">
+                            <a class="nav-link active" aria-current="true" href="#">Most Popular</a>
+                        </li>
+                        <li class="nav-item feliw">
+                            <a class="nav-link disabled" href="#">New launches</a>
+                        </li>
+                        <li class="nav-item feliw">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Upcoming</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-group p-1">
+                            <div class="card m-2">
+                                <img src="feature or best bikes img/g310-rr-right-front-three-quarter.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="bikename">BMW G310 RR</h5>
+                                    <p class="shortspecification">312 cc, 33.5 bhp, 174kg</p>
+                                    <div>
+                                        <span class="pricetitle">Avg. Ex-showroom price</span>
+                                        <span class="onlineprice">₹ 2,85,000</span>
+                                    </div>
+                                    <span class="font14">onwards</span> 
+                                    <div>
+                                        <button class="pricebtn">Check on-road price</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card m-2">
+                                <img src="feature or best bikes img/ronin-225-right-front-three-quarter.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="bikename">TVS Ronin 225</h5>
+                                    <p class="shortspecification">226 cc, 20 bhp, 159kg</p>
+                                    <span class="pricetitle">Avg. Ex-showroom price</span>
+                                    <div>
+                                        <span class="onlineprice">₹ 1,49,000</span>
+                                        <span class="font14">onwards</span>
+                                    </div> 
+                                    <div>
+                                        <button class="pricebtn">Check on-road price</button>
+                                    </div>                                
+                                </div>
+                            </div>
+
+                            <div class="card m-2">
+                                <img src="feature or best bikes img/R15 V4 Model Image.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="bikename ">R15 V4</h5>
+                                    <p class="shortspecification">155 cc, 18.1 bhp, 142kg</p>
+                                    <span class="pricetitle">Avg. Ex-showroom price</span>
+                                    <div>
+                                        <span class="onlineprice">₹ 1,78,000</span>
+                                        <span class="font14">onwards</span>
+                                    </div>                             
+                                    <div>
+                                        <button class="pricebtn">Check on-road price</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-3 mx-auto w-50">
+                        <button type="button" class="btn btn-outline-warning mb-2 view-all-target-btn">View more Brands</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- review -->
+    <section id="Browse bikes by">
+        <h4 class="text-center mt-4 text1" font-weight:900>Featured bikes</h4>
+        <div class=" Container">
+            <div class="w-75 col1">
+                <p class="text-secondary text-center p-2 ">3000+ unbiased, verified reviews from bike owners. Know the pros and cons of 200+ bike models from real owners.</p>
+                <div class="input-group mb-3 w-50 wid">
+                    <input type="text" class="form-control " placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button type="button" class="btn btn-danger" id="button-addon2">Button</button>
+                </div>
+                <div class="row p-2">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Pure ev scooter review</h5>
+                                <p class="text-secondary text-center">Huge sound in battery cabinet, no proper fixture to hold the battery...</p>
+                                <h6 class="text-Secondary text-center">3 week ago</h6>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary">Read full review</button>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Hero Destini 125 CC</h5>
+                                <p class="text-secondary text-center">Vibrates at 30_50 speed.Design-wise is ok. Major biggest th....</p>
+                                <h6 class="text-Secondary text-center">4 week ago</h6>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary">Read full review</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">TVS Apache RTR 160 4V</h5>
+                                <p class="text-secondary text-center">Go with apache...They treat you like premium customers...And...</p>
+                                <h6 class="text-Secondary text-center   ">5 week ago</h6>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary">Read full review</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- news -->
+    <section>
+        <h4 class="text-center mt-4 text1" font-weight:900>Featured bikes</h4>
+        <div class=" Container">
+            <div class="w-75  col1">
+                <div id="newshead">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item feliw">
+                        <a class="nav-link active text-center" aria-current="page" href="#">Active</a>
+                        </li>
+                        <li class="nav-item feliw">
+                        <a class="nav-link text-center" href="#">Link</a>
+                        </li>
+                        <li class="nav-item feliw">
+                        <a class="nav-link text-center" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card mb-3 mt-3 p-1" style="max-width: 947px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/bmw-left-side-view0.webp" class="img-fluid rounded-start " alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">2022 BWW R 1250 RT launched in India at Rs 23.95 lakh</h5>
+                                <p class="card-text text-secondary">
+                                    Deliveries of the bike have commenced this month for customers who have already booked it through the authorised dealerships. 
+                                </p>
+                                <p class="card-text"><small class="text-muted">Updated recently</small></p>
+                                <a href="#">Read more</a>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="card mb-3 p-1" style="max-width: 947px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/right-side-view1.webp" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Production-ready F77 electric motorcycle unveiled</h5>
+                                <p class="card-text text-secondary">
+                                    Ultraviolette Automotive recently hosted an exclusive test ride of its electric motorcycle, the F77, with India’s pilot community.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 1 mins ago</small></p>
+                                <a href="#">Read more</a>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="card mb-3 p-1" style="max-width: 947px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/right-side-view0.webp" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">2022 Royal Enfield Interceptor 650 </h5>
+                                <p class="card-text text-secondary">
+                                    Chinese two-wheeler manufacturer, Zontes Motorcycles, has been working on its upcoming three-cylinder engine. 
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <a href="#">Read more</a>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted " style="background-color: #333 !important;">
+    <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
+        <!-- Left -->
+            <div class="Container w-50 text-center" >
+                <div class="mb-3 d-none d-lg-block">
+                    <span>Social networks:</span>
+                </div>
+                <!-- Left -->
+            
+                <!-- Right -->
+                <div id="icons">
+                    <a  href="https://www.facebook.com/mohit.saxena.35513/"  class="me-3 link-secondary">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://stackoverflow.com/users/19368893/mohit" class="me-3 link-secondary">
+                        <i class="fab fa-stack-overflow"></i>
+                    </a>
+                    <a href="https://stackoverflow.com/users/19368893/mohit" class="me-3 link-secondary">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/rdx_maddy/" class="me-4 link-secondary">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rdx-maddy-731934122/" class="me-3 link-secondary">
+                    <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Mohit6795" class="me-3 link-secondary">
+                    <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="Container w-50 text-center" >
+                <div class="mb-1 d-none d-lg-block">
+                    <span>Download Mobile App</span>
+                </div>
+                <div id="icons" >
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.bikewale.app&referrer=utm_source%3DDesktopsite%26utm_medium%3DDrawer%26utm_campaign%3DBikeWale%2520Desktopsite%2520Drawer" class=" link-secondary">
+                        <img src="img/Screenshot 2022-08-17 183654.png" alt="Playstore" class="socialimg1">
+                    </a>
+                    <a href="https://apps.apple.com/us/app/bikewale-buy-new-bike-scooty/id1492806145?ls=1" class="link-secondary">
+                        <img src="img/appllogo.png" alt="App store" class="socialimg1">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="text-center text-white border-bottom" style="background-color: #333;">
+            <!-- Grid container -->
+            <div class="container p-1">
+            <!-- Section: Images -->
+            <section class="">
+                <div class="row justify-content-center ">
+                <div class="col-lg-2 col-md-12  ">
+                    <img src="img/bikewale1.png" class="w-100 df mt-1"/>
+                </div>
+                <div class="col-lg-2 col-md-12  ">
+                    <img src="img/carexpert2.png" class="w-100 df"/>
+                </div>
+                <div class="col-lg-2 col-md-12  ">
+                    <img src="img/cartred3.png" class="w-100 df mt-1"/>
+                </div>
+                <div class="col-lg-2 col-md-12  ">
+                    <img src="img/ouylok4.png" class="w-100 df"/>
+                </div>
+                <div class="col-lg-2 col-md-12  ">
+                    <img src="img/asure5.png" class="w-100 df"/>
+                </div>
+
+                </div>
+            </section>
+            <!-- Section: Images -->
+            </div>
+            <!-- Grid container -->
+        </div>
+        <!-- Section: Links  -->
+        <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3 text-secondary"></i>Bikewale
+                </h6>
+                <p>
+                    BikeWale's mission is to bring delight in two-wheeler buying, we offer a bouquet of reliable tools and services to help motorcycle and scooter consumers decide on buying the right two-wheeler, at the right price and from the right partner.
+                </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                Products
+                </h6>
+                <p>
+                <a href="#!" class="text-reset">Scooter</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Sport Bikes </a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Budget Bikes</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Cruiser Bikes</a>
+                </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+                </h6>
+                <p>
+                <a href="#!" class="text-reset">Pricing</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Settings</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Orders</a>
+                </p>
+                <p>
+                <a href="#!" class="text-reset">Help</a>
+                </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+                <p>
+                <i class="fas fa-envelope me-3 text-secondary"></i>
+                mohit.10saxena@gmail.com
+                </p>
+                <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+            </div>
+            </div>
+        </div>
+    </section>
+  
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: #00000084 !important;">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">BIKEWALE.com &hearts;</a>
+        </div>
+    </footer>
+         <!-- Footer -->
+    <script>
+        let x = document.getElementById('out');
+        let y = document.getElementById('location');
+        let z = document.getElementById('weather');
+        function geolocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition)
+            }else{
+                x.innerText= "Geo Not Supported"
+            }
+        }
+
+        function showPosition(data){
+            console.log(data)
+            let lat = data.coords.latitude;
+            let long = data.coords.longitude;
+            
+            const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+            //api calling
+            fetch(url,{method:'GET'})
+            //return promise
+            .then((res) => res.json())
+            // resolve the promise
+            .then((data) => {
+                y.innerText = `${data.city.name}`
+                z.innerText = `${data.list[0].temp.day} °C`
+            })
+
+        }
+        window.onload=geolocation()
+    </script>
+</body>
+</html>

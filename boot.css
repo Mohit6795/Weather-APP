@@ -1,0 +1,481 @@
+body {
+    font-family: 'Open Sans',sans-serif,Arial;
+    background: #f5f5f5;
+    font-style: normal;
+}
+.container{
+    max-width: 1231px !important;
+}
+#search{
+    /* border: 12px solid rgb(32, 42, 114); */
+    height: 400px;
+    width: 100%;
+    background-image: url(img/home-top-banner-2.jpg);
+    background-size: 100% 400px ;
+    background-repeat: no-repeat;
+}
+.welcomebox{
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+h1 {
+    color: hsl(0, 0%, 28%);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+h1 {
+    
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 2%, 13%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s infinite linear;
+}
+  
+@keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    40% {
+      background-position: 550px;
+    }
+    
+    100% {
+      background-position: 600px;
+    }
+}
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+/* Base */
+
+.ptitle {
+  position: relative;
+  color: hsl(0, 0%, 68%);
+  font-weight: bold;
+  font-family: "Anonymous Pro", monospace;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 710px;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.bar1{
+    margin-top: 130px;
+}
+.wid{
+    width: 50%;
+    margin-left: 25%;
+}
+.text1{
+    font-weight: 550;
+}
+/* /////////////////////////////////////////////////////////////////////// */
+.col1{
+    background-color: white;
+    margin-left: 12.5% ;
+}
+.li1{
+    width: 33.5%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom:2px solid #f5f5f5;
+   
+}
+
+.selectbrand{
+    float: left;
+    margin: 18px;
+}
+.brandlogo{
+    display: block;
+}
+.brandlogo>img{
+    border-radius: 6px;
+}
+
+.brandlogo:hover{
+    transform: scale(1.1);
+}
+
+#content {
+   
+    overflow: hidden;
+    
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+li {
+    list-style: none;
+    display: list-item;
+}
+
+ #number_container ul li a {
+    float: left;
+    padding: 5px;
+    min-width: 35px;
+    margin-right: 12px;
+    min-height: 35px;
+    line-height: 28px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    background-color: #fff;
+    border: #fff solid 1px;
+}
+.view-all-target-btn{
+    background: 0 0;
+    color: #3799a7;
+    border: 1px solid #3799a7;
+    margin-top: 8px;
+}
+.view-all-target-btn:hover{
+    background-color: #3799a7;
+}
+.feliw{
+    width: 33%;
+}
+.bikename{
+    text-decoration: none;
+    color: #2a2a2a;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Open Sans',sans-serif,Arial;
+}
+.shortspecification{
+    text-decoration: none;
+    font-size: 14px;
+    color: #a8afb3;
+    font-family: 'Open Sans',sans-serif,Arial;
+    text-align: left !important;
+}
+.pricetitle{
+    display: block;
+    font-size: 14px;
+    color: #82888b;
+    font-family: 'Open Sans',sans-serif,Arial;
+    margin-left: 0px !important;
+    text-align: left !important;
+}
+.onlineprice{
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #4d5057;
+    font-weight: 700;
+    font-family: 'Open Sans',sans-serif,Arial;
+    float: left;
+}
+.font14{
+    float: left;
+    margin-top: 7px;
+    margin-left: 2%;
+    font-size: 14px;
+    color: #4d5057;
+    font-weight: 700;
+    font-family: 'Open Sans',sans-serif,Arial;
+    
+}
+.btnforprice{
+    display: block;
+}
+.pricebtn{
+    background: #f04031;
+    color: #fff;
+    margin-left: 2px;
+    margin-top: 17%;
+    font-family: 'Open Sans',sans-serif,Arial;
+    font-size: 16px;
+    border: none;
+    height: 35px;
+    display: block;
+    cursor: pointer;
+    
+}
+.pricebtn:hover{
+    transform: scale(1.1);
+}
+#chackprice-banner{
+    /* border: 1px solid rebeccapurple; */
+    height: 400px;
+    width: 100%;
+    background-image: url(img/back\ ground\ baner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+
+    
+}
+#borderonbanner{
+    /* border: 1px black solid; */
+    height: 250px;
+    width: 33%;
+    margin-top: 70px;
+    float: left;
+    margin-left: 10%;
+    position: absolute;
+    background: #fff;
+}
+#heading3{
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    /* color: #2a2a2a; */
+    font-family: 'Open Sans',sans-serif,Arial;
+    display: block;
+    margin-left: 4%;
+}
+#makemodelfinalprice{
+    width: 91%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 13px;
+    display: block;
+    height: 41px;
+    margin-left: 4%;
+
+}
+#loc-2{
+    display: block;
+    
+}
+#selectloc-2{
+    width: 92%;
+    background-color: #fff;
+    border-radius: 2px;
+    font-size: 13px;
+    height: 45px;
+    margin-left: 4%;
+    margin-top: 22px;
+    border: none;
+    border: 1px solid #ccc;
+    color: #7c8183;
+}
+#finalpricebtn{
+    height: 45px;
+    width: 48%;
+    background-color: #e34c42;
+    color: white;
+    border: none;
+    margin-left: 4%;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.bliw1{
+    width: 20%;
+}
+
+
+
+/* comp section */
+/*  */
+
+/*.................footer................. */
+footer{
+
+}
+#icons>a{
+    text-decoration: none;
+    
+}
+.df:hover{
+    transform: scale(0.9);
+}
+.socialimg1{
+    height: 30px;
+    width: 17%;
+   border-radius: 5px;
+}
+.weatherapi{
+    background-color: #2a2a2a00;
+    border: none;
+    font-weight: 700;
+    color: #a8afb3;
+
+}
+
+/* @media screen and (min-width: 600px) {
+    div.example {
+      font-size: 80px;
+    }
+  }
+  
+  /* If screen size is 600px wide, or less, set the font-size of <div> to 30px */
+  /* @media screen and (max-width: 600px) {
+    div.example {
+      font-size: 30px;
+    }
+  } */ 
+  @media screen and (max-width: 1024px) {
+    body{
+        /* background-color: #37a740; */
+        
+    }  
+    .nimg{
+        height: 200px;
+    }
+    .pricebtn{
+        width: 100%;
+        font-size: 14px !important;
+    }
+    #number_container ul li a{
+        margin-left: 10px;
+            
+    }
+    .selectbrand a span img {
+        height: 30px;
+        
+    }
+    .selectbrand a{
+        font-size:10px ;
+    }
+
+ }
+  @media screen and (max-width: 993px) {
+    body{
+        /* background-color: #85a737; */
+        
+    }  
+    .df{
+        height: 70px;
+        width: 20% !important;
+    }
+    
+ }
+ @media screen and (max-width: 824px) {
+    body{
+        /* background-color: #5737a7; */
+        
+    }  
+    
+    .pricebtn{
+        width: 100%;
+        font-size: 14px !important;
+    }
+}
+@media screen and (max-width: 778px) {
+    body{
+        /* background-color: #a73737; */
+    }   
+   .vv{
+    font-size: 14px;
+   }
+   .headtitle{
+    font-size: 44px;
+   }
+   .ptitle{
+    font-size: 13px;
+    letter-spacing: 2px;
+   }
+   .logobike{
+    margin-bottom: 4px;
+   }
+   .col1{
+    width: 100% !important;
+    margin-left: 0% !important;
+   }
+   .pricebtn{
+   width: 100%;
+   font-size: 14px !important;
+    }
+    #number_container ul li a{
+    margin-left: 10px;
+    
+   }
+   .selectbrand a span img {
+    height: 30px;
+
+   }
+   .selectbrand a{
+    font-size:10px ;
+   }
+}
+  @media screen and (max-width: 730px) {
+    body{
+        /* background-color: #a73737; */
+    }   
+   .vv{
+    font-size: 14px;
+   }
+   .headtitle{
+    font-size: 44px;
+   }
+   .ptitle{
+    font-size: 13px;
+    letter-spacing: 2px;
+   }
+   .logobike{
+    margin-bottom: 4px;
+   }
+   .col1{
+    width: 100% !important;
+    margin-left: 0% !important;
+   }
+   .pricebtn{
+   width: 100%;
+   font-size: 14px !important;
+    }
+    #number_container ul li a{
+    margin-left: 10px;
+    
+   }
+   .selectbrand a span img {
+    height: 30px;
+
+   }
+   .selectbrand a{
+    font-size:10px ;
+   }
+}
+@media screen and (max-width: 600px) {
+    body{
+        /* background-color: #2a4c52; */
+    }   
+   .vv{
+    font-size: 10px;
+   }
+   .headtitle{
+    font-size: 40px;
+   }
+   .ptitle{
+    font-size: 10px;
+    letter-spacing: 1.5px;
+   }
+   #number_container ul li a{
+    margin-left: 40px;
+   }
+   .selectbrand a span img {
+    height: 40px;
+
+   }
+   .selectbrand a{
+    font-size:15px ;
+   }
+}
