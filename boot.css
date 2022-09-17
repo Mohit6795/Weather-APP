@@ -325,7 +325,15 @@ footer{
     color: #a8afb3;
 
 }
-
+@media screen and (max-width: 1050px) {
+    body{
+        /* background-color: #37a740; */
+        
+    }  
+    .tphd{
+        width: 23% !important;
+    }
+}
 
   @media screen and (max-width: 1024px) {
     body{
@@ -372,6 +380,17 @@ footer{
     .pricebtn{
         width: 100%;
         font-size: 14px !important;
+    }
+    .tphd{
+        width: 20% !important;
+    }
+    .tph{
+        height: 80px !important;
+    }
+    .tpdt{
+        font-size: 13px;
+        font-weight: bold;
+        font-family: 'Open Sans',sans-serif,Arial;
     }
 }
 @media screen and (max-width: 778px) {
@@ -474,6 +493,11 @@ footer{
    }
     .tph{
         display: none;
+    }
+    .tpdt{
+        font-size: 12px;
+        font-weight: bold;
+        font-family:fantasy;
     }
 
 }
