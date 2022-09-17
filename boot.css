@@ -291,7 +291,12 @@ li {
 .bliw1{
     width: 20%;
 }
-
+.tph{
+    height: 100px !important;
+}
+.tph:hover{
+    transform: scale(1.1);
+}
 
 
 /* comp section */
