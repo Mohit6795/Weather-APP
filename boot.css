@@ -326,18 +326,7 @@ footer{
 
 }
 
-/* @media screen and (min-width: 600px) {
-    div.example {
-      font-size: 80px;
-    }
-  }
-  
-  /* If screen size is 600px wide, or less, set the font-size of <div> to 30px */
-  /* @media screen and (max-width: 600px) {
-    div.example {
-      font-size: 30px;
-    }
-  } */ 
+
   @media screen and (max-width: 1024px) {
     body{
         /* background-color: #37a740; */
@@ -483,4 +472,8 @@ footer{
    .selectbrand a{
     font-size:15px ;
    }
+    .tph{
+        display: none;
+    }
+
 }
