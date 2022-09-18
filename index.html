@@ -57,7 +57,7 @@
     </div>
     <!-- top strap -->
     <section class="bg-dark">
-        <div class="row mt-1 justify-content-center ">
+        <div class="row mt-1 justify-content-center w-100 ">
         <div class="card align-items-center m-1 bg-dark tphd" style="width: 16rem;">
             <img src="img/png top/scooter.png" class="card-img-top tph p-1 w-50" alt="scooter">
             <div class="dropdown">
@@ -712,18 +712,12 @@
 
                 </div>
             </section>
-            <!-- Section: Images -->
             </div>
-            <!-- Grid container -->
         </div>
-        <!-- Section: Links  -->
         <section class="">
         <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
             <div class="row mt-3">
-            <!-- Grid column -->
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <!-- Content -->
                 <h6 class="text-uppercase fw-bold mb-4">
                 <i class="fas fa-gem me-3 text-secondary"></i>Bikewale
                 </h6>
@@ -731,11 +725,7 @@
                     BikeWale's mission is to bring delight in two-wheeler buying, we offer a bouquet of reliable tools and services to help motorcycle and scooter consumers decide on buying the right two-wheeler, at the right price and from the right partner.
                 </p>
             </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
                 <h6 class="text-uppercase fw-bold mb-4">
                 Products
                 </h6>
@@ -752,11 +742,7 @@
                 <a href="#!" class="text-reset">Cruiser Bikes</a>
                 </p>
             </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
                 <h6 class="text-uppercase fw-bold mb-4">
                 Useful links
                 </h6>
@@ -773,11 +759,7 @@
                 <a href="#!" class="text-reset">Help</a>
                 </p>
             </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
                 <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
                 <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
                 <p>
@@ -816,11 +798,8 @@
             let long = data.coords.longitude;
             
             const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
-            //api calling
             fetch(url,{method:'GET'})
-            //return promise
             .then((res) => res.json())
-            // resolve the promise
             .then((data) => {
                 y.innerText = `${data.city.name}`
                 z.innerText = `${data.list[0].temp.day} °C`
